@@ -28,6 +28,7 @@ def can_be_created_in_a_block(args = nil)
       args.each do |k,v|
         m.send("#{k}", v)
       end
+    end
   end
 end
 
