@@ -23,12 +23,13 @@ def can_be_created_with_a_hash_of_attributes
 end
 
 def can_be_created_in_a_block(args = nil)
-          binding.pry
   Movie.create do |m|
     if args != nil
       args.each do |k,v|
         m.send("#{k}", v)
       end
+    else
+      m
     end
   end
 end
